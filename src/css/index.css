@@ -34,4 +34,8 @@
   .sub-title {
     @apply font-normal text-[13px] uppercase leading-[25px] tracking-[0.929px];
   }
+
+  .body {
+    @apply font-normal text-[15px] leading-[25px];
+  }
 }
