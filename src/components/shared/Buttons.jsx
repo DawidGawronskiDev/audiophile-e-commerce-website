@@ -19,4 +19,17 @@ const defaultStyling = {
   textTransform: "uppercase",
 };
 
-export { ButtonOrange };
+const ButtonShop = ({ text, link }) => {
+  return (
+    <button className="text-black-900/50 hover:text-orange-900 transition">
+      <Link className="flex items-center gap-2">
+        <span className="font-bold text-[13px] tracking-[1px] uppercase">
+          {text}
+        </span>
+        <img src="/assets/shared/desktop/icon-arrow-right.svg" alt="" />
+      </Link>
+    </button>
+  );
+};
+
+export { ButtonOrange, ButtonShop };
