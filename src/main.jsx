@@ -4,11 +4,29 @@ import App from "./components/App";
 import "./css/index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import CategoryPage, {
+  loader as categoryLoader,
+} from "./components/Pages/Category/Category";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/headphones",
+    element: <CategoryPage category={"headphones"} />,
+    loader: categoryLoader,
+  },
+  {
+    path: "/speakers",
+    element: <CategoryPage category={"speakers"} />,
+    loader: categoryLoader,
+  },
+  {
+    path: "/earphones",
+    element: <CategoryPage category={"earphones"} />,
+    loader: categoryLoader,
   },
 ]);
 
