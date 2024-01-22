@@ -1,6 +1,18 @@
 import { ButtonOrange } from "../shared/Buttons";
 
-const Hero = () => {
+const Hero = ({ title }) => {
+  if (title) {
+    return (
+      <section className="bg-black-900 py-24">
+        <div
+          className={`container-center h-[100%] grid items-center justify-center`}
+        >
+          <h2 className="text-white-900">{title}</h2>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="bg-black-900 h-[729px]">
       <div
