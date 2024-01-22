@@ -9,6 +9,10 @@
     font-family: "Manrope", sans-serif;
   }
 
+  * {
+    outline: 1px solid hsla(0deg, 100%, 50%, 0.2);
+  }
+
   h1 {
     @apply font-bold text-[56px] uppercase leading-[58px] tracking-[2px];
   }
@@ -43,5 +47,9 @@
 
   .body {
     @apply font-normal text-[15px] leading-[25px];
+  }
+
+  .container-center {
+    @apply max-w-[90dvw] desktop:max-w-[1110px] m-auto;
   }
 }
