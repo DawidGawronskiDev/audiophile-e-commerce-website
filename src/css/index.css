@@ -52,4 +52,50 @@
   .container-center {
     @apply max-w-[90dvw] desktop:max-w-[1110px] m-auto;
   }
+
+  .bg-hero {
+    background: linear-gradient(
+        to right,
+        hsla(0deg, 0%, 0%, 1) 10%,
+        hsla(0deg, 0%, 0%, 0.5) 90%,
+        hsla(0deg, 0%, 0%, 1)
+      ),
+      url("/assets/home/desktop/image-hero.jpg") no-repeat center / cover;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .bg-hero {
+      background: linear-gradient(
+          to right,
+          hsla(0deg, 0%, 0%, 1) 10%,
+          hsla(0deg, 0%, 0%, 0.5) 90%,
+          hsla(0deg, 0%, 0%, 1)
+        ),
+        url("/assets/home/tablet/image-header.jpg") no-repeat center / cover;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .bg-hero {
+      background: linear-gradient(
+          to right,
+          hsla(0deg, 0%, 0%, 1) 10%,
+          hsla(0deg, 0%, 0%, 0.5) 90%,
+          hsla(0deg, 0%, 0%, 1)
+        ),
+        url("/assets/home/tablet/image-header.jpg") no-repeat center / cover;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .bg-hero {
+      background: linear-gradient(
+          to right,
+          hsla(0deg, 0%, 0%, 1) 10%,
+          hsla(0deg, 0%, 0%, 0.5) 90%,
+          hsla(0deg, 0%, 0%, 1)
+        ),
+        url("/assets/home/mobile/image-header.jpg") no-repeat center / cover;
+    }
+  }
 }
