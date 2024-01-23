@@ -14,18 +14,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/headphones",
-    element: <CategoryPage category={"headphones"} />,
-    loader: categoryLoader,
-  },
-  {
-    path: "/speakers",
-    element: <CategoryPage category={"speakers"} />,
-    loader: categoryLoader,
-  },
-  {
-    path: "/earphones",
-    element: <CategoryPage category={"earphones"} />,
+    path: "/category/:category",
+    element: <CategoryPage />,
     loader: categoryLoader,
   },
 ]);

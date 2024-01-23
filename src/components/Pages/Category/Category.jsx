@@ -8,10 +8,19 @@ import Categories from "../../shared/Categories/Categories";
 import Testimonial from "../../shared/Testimonial/Testimonial";
 import Footer from "../../shared/Footer/Footer";
 
-function loader() {
-  const data = fetch("data.json").then((res) => res.json());
+async function loader(params) {
+  const fetchData = async () => {
+    try {
+      const response = await fetch("/data.json");
+      const data = await response.json();
 
-  return data;
+      return { data, category: params.params.category };
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  return fetchData();
 }
 
 const Product = ({ product }) => {
@@ -65,15 +74,17 @@ const Products = ({ products }) => {
 };
 
 const CategoryPage = ({ category }) => {
-  const data = useLoaderData();
-  const products = data.filter((product) => product.category === category);
+  const loaderData = useLoaderData();
+  const products = loaderData.data.filter(
+    (product) => product.category === loaderData.category
+  );
   console.log(products);
 
   return (
     <>
       <Header />
       <div className="grid gap-32">
-        <Hero title={category} />
+        <Hero title={loaderData.category} />
         <Products products={products} />
         <Categories />
         <Testimonial />
