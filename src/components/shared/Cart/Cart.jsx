@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { ButtonOrange } from "../Buttons";
+import { ShopContext } from "../../App";
 
 const QuantityButton = ({ id, quantity, handleItemsQuantity }) => {
   return (
@@ -60,6 +61,7 @@ const CartItem = ({ item, handleItemsQuantity }) => {
 };
 
 const Cart = ({ cartItems }) => {
+  const { cartVisible } = useContext(ShopContext);
   const [items, setItems] = useState(cartItems);
 
   const handleItemsQuantity = (val, id) => {
@@ -75,7 +77,7 @@ const Cart = ({ cartItems }) => {
   };
 
   return (
-    <>
+    <div className={`${cartVisible ? `block` : `hidden`}`}>
       <div className="fixed z-30 top-0 left-0 bg-black-900/40 w-full h-full">
         x
       </div>
@@ -114,7 +116,7 @@ const Cart = ({ cartItems }) => {
         </div>
         <ButtonOrange text={"Go to checkout"} />
       </div>
-    </>
+    </div>
   );
 };
 
