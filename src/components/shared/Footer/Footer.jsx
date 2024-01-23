@@ -44,7 +44,7 @@ const Footer = () => {
             <li>
               <Link>
                 <img
-                  src="assets/shared/desktop/icon-facebook.svg"
+                  src="/assets/shared/desktop/icon-facebook.svg"
                   alt="Facebook"
                 />
               </Link>
@@ -52,7 +52,7 @@ const Footer = () => {
             <li>
               <Link>
                 <img
-                  src="assets/shared/desktop/icon-twitter.svg"
+                  src="/assets/shared/desktop/icon-twitter.svg"
                   alt="Twitter"
                 />
               </Link>
@@ -60,7 +60,7 @@ const Footer = () => {
             <li>
               <Link>
                 <img
-                  src="assets/shared/desktop/icon-instagram.svg"
+                  src="/assets/shared/desktop/icon-instagram.svg"
                   alt="Instagram"
                 />
               </Link>
