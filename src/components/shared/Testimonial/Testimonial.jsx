@@ -4,15 +4,15 @@ const Testimonial = () => {
       <div className="container-center desktop:h-[540px] flex flex-col desktop:flex-row-reverse gap-8">
         <picture className="flex-1">
           <source
-            srcSet="public\assets\shared\tablet\image-best-gear.jpg"
+            srcSet="/assets/shared/tablet/image-best-gear.jpg"
             media="(max-width: 1440px)"
           />
           <source
-            srcSet="public\assets\shared\mobile\image-best-gear.jpg"
+            srcSet="/assets/shared/mobile/image-best-gear.jpg"
             media="(max-width: 768px)"
           />
           <img
-            src="public\assets\shared\desktop\image-best-gear.jpg"
+            src="/assets/shared/desktop/image-best-gear.jpg"
             alt=""
             className="desktop:h-full desktop:w-full object-cover rounded-lg"
           />
