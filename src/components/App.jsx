@@ -6,6 +6,7 @@ const ShopContext = createContext({
   cartItems: [],
   cartVisible: false,
   handleCartVisible: () => {},
+  handleItemQuantity: () => {},
 });
 
 function App() {
@@ -209,9 +210,24 @@ function App() {
     setCartVisible(!cartVisible);
   };
 
+  const handleItemQuantity = (val, id) => {
+    const updatedCartItems = cartItems.map((item) => {
+      if (item.id === id) {
+        const newQuantity = Math.max(1, item.quantity + val);
+        const updatedItem = { ...item, quantity: newQuantity };
+        return updatedItem;
+      }
+      return item;
+    });
+
+    setCartItems(updatedCartItems);
+  };
+
   return (
-    <ShopContext.Provider value={{ cartItems, cartVisible, handleCartVisible }}>
-      <Cart cartItems={cartItems} cartVisible={cartVisible} />
+    <ShopContext.Provider
+      value={{ cartItems, cartVisible, handleCartVisible, handleItemQuantity }}
+    >
+      <Cart />
       <Outlet />
     </ShopContext.Provider>
   );

@@ -1,15 +1,17 @@
 /* eslint-disable react/prop-types */
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ButtonOrange } from "../Buttons";
 import { ShopContext } from "../../App";
 
-const QuantityButton = ({ id, quantity, handleItemsQuantity }) => {
+const QuantityButton = ({ id, quantity }) => {
+  const { handleItemQuantity } = useContext(ShopContext);
+
   return (
     <div className="flex gap-4">
       <div className="flex font-bold text-black-900/25 bg-grey-900 *:aspect-square *:text-[13px] *:w-8 *:flex *:items-center *:justify-center *:cursor-pointer">
         <div
           onClick={() => {
-            handleItemsQuantity(-1, id);
+            handleItemQuantity(-1, id);
           }}
         >
           <span>-</span>
@@ -19,7 +21,7 @@ const QuantityButton = ({ id, quantity, handleItemsQuantity }) => {
         </div>
         <div
           onClick={() => {
-            handleItemsQuantity(1, id);
+            handleItemQuantity(1, id);
           }}
         >
           <span>+</span>
@@ -29,7 +31,7 @@ const QuantityButton = ({ id, quantity, handleItemsQuantity }) => {
   );
 };
 
-const CartItem = ({ item, handleItemsQuantity }) => {
+const CartItem = ({ item }) => {
   const name = item.name
     .split(" ")
     .reduce((acc, val) => {
@@ -51,30 +53,13 @@ const CartItem = ({ item, handleItemsQuantity }) => {
           &#36; {item.price}
         </span>
       </div>
-      <QuantityButton
-        id={item.id}
-        quantity={item.quantity}
-        handleItemsQuantity={handleItemsQuantity}
-      />
+      <QuantityButton id={item.id} quantity={item.quantity} />
     </li>
   );
 };
 
-const Cart = ({ cartItems }) => {
-  const { cartVisible } = useContext(ShopContext);
-  const [items, setItems] = useState(cartItems);
-
-  const handleItemsQuantity = (val, id) => {
-    const item = items.find((item) => item.id === id);
-
-    if (item.quantity < 1 && val === -1) {
-      return;
-    } else {
-      item.quantity += val;
-
-      setItems([...items, item]);
-    }
-  };
+const Cart = () => {
+  const { cartItems, cartVisible } = useContext(ShopContext);
 
   return (
     <div className={`${cartVisible ? `block` : `hidden`}`}>
@@ -97,11 +82,7 @@ const Cart = ({ cartItems }) => {
         </div>
         <ul className="grid gap-6">
           {cartItems.map((item) => (
-            <CartItem
-              key={item.id}
-              item={item}
-              handleItemsQuantity={handleItemsQuantity}
-            />
+            <CartItem key={item.id} item={item} />
           ))}
         </ul>
         <div className="flex items-center">
