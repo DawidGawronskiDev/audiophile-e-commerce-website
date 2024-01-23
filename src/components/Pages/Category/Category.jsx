@@ -55,7 +55,7 @@ const Product = ({ product }) => {
         <span className="body opacity-50 desktop:max-w-[445px]">
           {product.description}
         </span>
-        <ButtonOrange text={"See product"} />
+        <ButtonOrange text={"See product"} link={`product/${product.slug}`} />
       </div>
     </li>
   );
