@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 const NavLink = ({ name }) => {
   return (
     <li>
-      <Link to={"/"} className="sub-title hover:text-orange-800 transition">
+      <Link
+        to={`/category/${String(name).toLowerCase()}`}
+        className="sub-title hover:text-orange-800 transition"
+      >
         {name}
       </Link>
     </li>
