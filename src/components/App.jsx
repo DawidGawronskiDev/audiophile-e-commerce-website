@@ -1,11 +1,9 @@
-import Header from "./Header/Header";
-import Categories from "./shared/Categories/Categories";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Header />
-      <Categories />
+      <Outlet />
     </>
   );
 }

@@ -15,16 +15,18 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/category/:category",
-    element: <CategoryPage />,
-    loader: categoryLoader,
-  },
-  {
-    path: "/category/:category/product/:slug",
-    element: <ProductPage />,
-    loader: productLoader,
+    children: [
+      {
+        path: "/category/:category",
+        element: <CategoryPage />,
+        loader: categoryLoader,
+      },
+      {
+        path: "/category/:category/product/:slug",
+        element: <ProductPage />,
+        loader: productLoader,
+      },
+    ],
   },
 ]);
 
