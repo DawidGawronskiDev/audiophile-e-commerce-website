@@ -14,10 +14,10 @@ const Testimonial = () => {
           <img
             src="/assets/shared/desktop/image-best-gear.jpg"
             alt=""
-            className="desktop:h-full desktop:w-full object-cover rounded-lg"
+            className="desktop:h-full desktop:w-full object-cover rounded-lg aspect-square mobile:aspect-video"
           />
         </picture>
-        <div className="flex-1 flex flex-col justify-center gap-6 bg-red-300 h-[100%] text-center desktop:text-left">
+        <div className="flex-1 flex flex-col justify-center gap-6 h-[100%] text-center desktop:text-left">
           <h2>
             Bringing you the <span className="text-orange-900">best</span> audio
             gear
