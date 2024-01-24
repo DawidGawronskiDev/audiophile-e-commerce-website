@@ -83,6 +83,7 @@ const CategoryPage = ({ category }) => {
   return (
     <>
       <Header />
+      <div className="mt-[90px]"></div>
       <div className="grid gap-32">
         <Hero title={loaderData.category} />
         <Products products={products} />

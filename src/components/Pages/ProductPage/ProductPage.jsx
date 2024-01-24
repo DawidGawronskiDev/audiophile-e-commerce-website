@@ -218,6 +218,7 @@ const ProductPage = () => {
     <>
       <div className="grid gap-32">
         <Header />
+        <div className="mt-[90px]"></div>
         <Product product={product} />
         <Features product={product} />
         <Content product={product} />
