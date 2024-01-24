@@ -25,7 +25,10 @@ const Hero = ({ title }) => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </span>
-          <ButtonOrange text={"See Product"} />
+          <ButtonOrange
+            text={"See Product"}
+            link={"/category/headphones/product/xx99-mark-two-headphones"}
+          />
         </div>
       </div>
     </section>
