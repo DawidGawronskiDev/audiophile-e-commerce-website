@@ -7,6 +7,7 @@ const ShopContext = createContext({
   cartVisible: false,
   handleCartVisible: () => {},
   handleItemQuantity: () => {},
+  handleAddItem: () => {},
 });
 
 function App() {
@@ -206,7 +207,6 @@ function App() {
   const [cartVisible, setCartVisible] = useState(false);
 
   const handleCartVisible = () => {
-    console.log("Hi!");
     setCartVisible(!cartVisible);
   };
 
@@ -223,9 +223,33 @@ function App() {
     setCartItems(updatedCartItems);
   };
 
+  const handleAddItem = (product, quantity) => {
+    const updatedCartItems = [...cartItems];
+
+    const index = updatedCartItems.findIndex((item) => item.id === product.id);
+
+    if (index !== -1) {
+      const updatedItem = {
+        ...updatedCartItems[index],
+        quantity: updatedCartItems[index].quantity + quantity,
+      };
+      updatedCartItems[index] = updatedItem;
+    } else {
+      updatedCartItems.push({ ...product, quantity });
+    }
+
+    setCartItems(updatedCartItems);
+  };
+
   return (
     <ShopContext.Provider
-      value={{ cartItems, cartVisible, handleCartVisible, handleItemQuantity }}
+      value={{
+        cartItems,
+        cartVisible,
+        handleCartVisible,
+        handleItemQuantity,
+        handleAddItem,
+      }}
     >
       <Cart />
       <Outlet />

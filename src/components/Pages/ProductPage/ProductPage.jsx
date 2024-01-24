@@ -4,7 +4,8 @@ import Header from "../../Header/Header";
 import Categories from "../../shared/Categories/Categories";
 import Testimonial from "../../shared/Testimonial/Testimonial";
 import Footer from "../../shared/Footer/Footer";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ShopContext } from "../../App";
 
 async function loader(params) {
   const fetchData = async () => {
@@ -21,7 +22,9 @@ async function loader(params) {
   return fetchData();
 }
 
-const QuantityButton = ({ quantity, handleQuantity }) => {
+const QuantityButton = ({ quantity, product, handleQuantity }) => {
+  const { handleAddItem } = useContext(ShopContext);
+
   return (
     <div className="flex gap-4">
       <div className="flex font-bold text-black-900/25 bg-grey-900 *:aspect-square *:w-10 *:flex *:items-center *:justify-center *:cursor-pointer">
@@ -43,7 +46,12 @@ const QuantityButton = ({ quantity, handleQuantity }) => {
           <span>+</span>
         </div>
       </div>
-      <button className="flex-1 mobile:px-8 uppercase bg-orange-900 hover:bg-orange-800 transition">
+      <button
+        className="flex-1 mobile:px-8 uppercase bg-orange-900 hover:bg-orange-800 transition"
+        onClick={() => {
+          handleAddItem(product, quantity);
+        }}
+      >
         <span className="font-bold text-[13px] tracking-[1px] text-white-900">
           Add to cart
         </span>
@@ -87,7 +95,11 @@ const Product = ({ product }) => {
             {product.description}
           </span>
           <h5>&#36; {product.price}</h5>
-          <QuantityButton quantity={quantity} handleQuantity={handleQuantity} />
+          <QuantityButton
+            quantity={quantity}
+            handleQuantity={handleQuantity}
+            product={product}
+          />
         </div>
       </div>
     </div>
@@ -95,7 +107,6 @@ const Product = ({ product }) => {
 };
 
 const Features = ({ product }) => {
-  console.log(product);
   return (
     <div className="container-center">
       <div className="grid gap-6">
