@@ -5,13 +5,10 @@ import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../App";
 
-const NavLink = ({ name }) => {
+const NavLink = ({ name, link }) => {
   return (
     <li>
-      <Link
-        to={`/category/${String(name).toLowerCase()}`}
-        className="sub-title hover:text-orange-800 transition"
-      >
+      <Link to={link} className="sub-title hover:text-orange-800 transition">
         {name}
       </Link>
     </li>
@@ -19,12 +16,13 @@ const NavLink = ({ name }) => {
 };
 
 const NavLinks = () => {
+  // `/category/${String(name).toLowerCase()`
   return (
     <ul className="flex gap-8 text-white-900">
-      <NavLink name={"Home"} />
-      <NavLink name={"Headphones"} />
-      <NavLink name={"Speakers"} />
-      <NavLink name={"Earphones"} />
+      <NavLink name={"Home"} link={"/"} />
+      <NavLink name={"Headphones"} link={`/category/headphones`} />
+      <NavLink name={"Speakers"} link={`/category/speakers`} />
+      <NavLink name={"Earphones"} link={`/category/earphones`} />
     </ul>
   );
 };
