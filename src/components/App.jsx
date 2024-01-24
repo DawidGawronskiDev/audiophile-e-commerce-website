@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Cart from "./shared/Cart/Cart";
+import MainPage from "./Pages/MainPage/MainPage";
 
 const ShopContext = createContext({
   cartItems: [],
@@ -11,6 +12,9 @@ const ShopContext = createContext({
 });
 
 function App() {
+  const location = useLocation();
+  console.log(location);
+
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
@@ -252,7 +256,7 @@ function App() {
       }}
     >
       <Cart />
-      <Outlet />
+      {location.pathname === "/" ? <MainPage /> : <Outlet />}
     </ShopContext.Provider>
   );
 }
