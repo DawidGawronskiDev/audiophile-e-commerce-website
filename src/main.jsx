@@ -6,7 +6,7 @@ import "./css/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CategoryPage, {
   loader as categoryLoader,
-} from "./components/Pages/Category/Category";
+} from "./components/Pages/CategoryPage/CategoryPage";
 import ProductPage, {
   loader as productLoader,
 } from "./components/Pages/ProductPage/ProductPage";

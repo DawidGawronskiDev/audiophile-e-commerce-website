@@ -10,7 +10,7 @@
   }
 
   * {
-    outline: 1px solid hsla(0deg, 100%, 50%, 0.2);
+    /* outline: 1px solid hsla(0deg, 100%, 50%, 0.2); */
   }
 
   h1 {
