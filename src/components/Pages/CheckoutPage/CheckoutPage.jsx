@@ -146,9 +146,9 @@ const Summary = () => {
 const Checkout = () => {
   return (
     <div className="bg-grey-800">
-      <div className="container-center p-8 desktop:px-0 grid gap-8 ">
+      <div className="container-center p-4 mobile:p-8 desktop:px-0 grid gap-8 ">
         <Form className="grid gap-8 desktop:flex items-start">
-          <div className="bg-white-900 grid gap-12 p-8 rounded-lg flex-1">
+          <div className="bg-white-900 grid gap-12 p-4 mobile:p-8 rounded-lg flex-1">
             <h2>Checkout</h2>
 
             <div className="grid gap-4">
