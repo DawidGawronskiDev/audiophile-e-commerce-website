@@ -10,6 +10,7 @@ import CategoryPage, {
 import ProductPage, {
   loader as productLoader,
 } from "./components/Pages/ProductPage/ProductPage";
+import CheckoutPage from "./components/Pages/CheckoutPage/CheckoutPage";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
         path: "/category/:category/product/:slug",
         element: <ProductPage />,
         loader: productLoader,
+      },
+      {
+        path: "/checkout",
+        element: <CheckoutPage />,
       },
     ],
   },
