@@ -62,7 +62,7 @@ const Cart = () => {
   const { cartItems, cartVisible } = useContext(ShopContext);
 
   return (
-    <div className={`${cartVisible ? `block` : `block`}`}>
+    <div className={`${cartVisible ? `block` : `hidden`}`}>
       <div className="fixed z-50 top-0 left-1/2 -translate-x-1/2 container-center w-full h-[calc(100dvh_-_90px)] mt-[90px] tablet:grid items-start justify-items-end">
         <div className="z-40 bg-white-900 p-2 mobile:p-6 rounded-lg grid gap-8 my-8 tablet:w-[377px]">
           <div className="flex">
