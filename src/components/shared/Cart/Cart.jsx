@@ -44,7 +44,7 @@ const CartItem = ({ item }) => {
 
   return (
     <li className="flex items-center gap-4 text-[15px]">
-      <div className="w-16 aspect-square">
+      <div className="w-16 aspect-square bg-grey-800">
         <img src={item.image.mobile} alt="" className="rounded-lg " />
       </div>
       <div className="flex-1">
@@ -62,9 +62,9 @@ const Cart = () => {
   const { cartItems, cartVisible } = useContext(ShopContext);
 
   return (
-    <div className={`${cartVisible ? `block` : `hidden`}`}>
+    <div className={`${cartVisible ? `block` : `block`}`}>
       <div className="fixed z-50 top-0 left-1/2 -translate-x-1/2 container-center w-full h-[calc(100dvh_-_90px)] mt-[90px] tablet:grid items-start justify-items-end">
-        <div className="z-40 bg-grey-900 p-2 mobile:p-6 rounded-lg grid gap-8 my-8 tablet:w-[377px]">
+        <div className="z-40 bg-white-900 p-2 mobile:p-6 rounded-lg grid gap-8 my-8 tablet:w-[377px]">
           <div className="flex">
             <h6 className="flex-1">
               Cart (
