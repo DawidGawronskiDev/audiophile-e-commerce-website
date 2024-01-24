@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Cart from "./shared/Cart/Cart";
 import MainPage from "./Pages/MainPage/MainPage";
+import ScrollToTop from "./ScrollToTop";
 
 const ShopContext = createContext({
   cartItems: [],
@@ -263,6 +264,7 @@ function App() {
     >
       <Cart />
       {location.pathname === "/" ? <MainPage /> : <Outlet />}
+      <ScrollToTop />
     </ShopContext.Provider>
   );
 }
