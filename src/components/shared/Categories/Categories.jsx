@@ -10,7 +10,7 @@ const Category = ({ name }) => {
       />
       <div className="absolute bottom-6 grid items-center justify-items-center gap-4">
         <h6>{name}</h6>
-        <ButtonShop text={"Shop"} />
+        <ButtonShop text={"Shop"} name={name} />
       </div>
     </li>
   );

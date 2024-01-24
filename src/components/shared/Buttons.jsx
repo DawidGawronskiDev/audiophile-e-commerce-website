@@ -21,9 +21,9 @@ const defaultStyling = {
   textTransform: "uppercase",
 };
 
-const ButtonShop = ({ text, link }) => {
+const ButtonShop = ({ text, name }) => {
   return (
-    <Link to={link}>
+    <Link to={`/category/${String(name).toLowerCase()}`}>
       <button className="text-black-900/50 hover:text-orange-900 transition">
         <div className="flex items-center gap-2">
           <span className="font-bold text-[13px] tracking-[1px] uppercase">
