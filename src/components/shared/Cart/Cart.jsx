@@ -91,7 +91,7 @@ const Cart = () => {
               }, 0)}
             </h6>
           </div>
-          <ButtonOrange text={"Go to checkout"} />
+          <ButtonOrange text={"Go to checkout"} link={"/checkout"} />
         </div>
       </div>
       <div className="fixed z-40 top-0 left-0 bg-black-900/25 w-[100dvw] h-[100dvh]"></div>
