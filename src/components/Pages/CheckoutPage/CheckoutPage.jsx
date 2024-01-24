@@ -47,7 +47,7 @@ const RadioInput = ({ name, placeholder, checked = false }) => {
   };
 
   return (
-    <div className="border-solid border-[1px] border-black-900/25 py-4 px-6 rounded-lg flex items-center gap-4">
+    <div className="border-solid border-[1px] border-black-900/25 py-4 px-6 rounded-lg flex items-center gap-4 tablet:odd:col-start-2">
       <input
         type="radio"
         id={name}
@@ -151,7 +151,7 @@ const Checkout = () => {
             <h6 className="text-orange-900 text-[13px]">Billing details</h6>
           </legend>
 
-          <div className="grid gap-6">
+          <div className="grid gap-6 tablet:grid-cols-2">
             <div className="grid gap-2">
               <label htmlFor="name" className="font-bold text-[12px]">
                 Name
@@ -190,8 +190,8 @@ const Checkout = () => {
             <h6 className="text-orange-900 text-[13px]">Shipping info</h6>
           </legend>
 
-          <div className="grid gap-6">
-            <div className="grid gap-2">
+          <div className="grid gap-6  tablet:grid-cols-2">
+            <div className="grid gap-2 tablet:col-span-2">
               <label htmlFor="address" className="font-bold text-[12px]">
                 Your Address
               </label>
@@ -240,7 +240,7 @@ const Checkout = () => {
           </legend>
 
           <div className="grid gap-6">
-            <div className="grid gap-2">
+            <div className="grid gap-4 tablet:grid-cols-2">
               <label htmlFor="paymentmethod" className="font-bold text-[12px]">
                 Payment Method
               </label>
@@ -254,6 +254,9 @@ const Checkout = () => {
                 placeholder={"Cash on Delivery"}
               />
             </div>
+          </div>
+
+          <div className="grid gap-6 tablet:grid-cols-2">
             <div className="grid gap-2">
               <label htmlFor="emoneynumber" className="font-bold text-[12px]">
                 e-Money Number
@@ -276,7 +279,6 @@ const Checkout = () => {
             </div>
           </div>
         </div>
-
         <Summary />
       </div>
     </div>
