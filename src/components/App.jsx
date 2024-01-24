@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Cart from "./shared/Cart/Cart";
 import MainPage from "./Pages/MainPage/MainPage";
@@ -213,6 +213,12 @@ function App() {
   const handleCartVisible = () => {
     setCartVisible(!cartVisible);
   };
+
+  useEffect(() => {
+    if (cartVisible) {
+      setCartVisible(false);
+    }
+  }, [location]);
 
   const handleItemQuantity = (val, id) => {
     const updatedCartItems = cartItems.map((item) => {
