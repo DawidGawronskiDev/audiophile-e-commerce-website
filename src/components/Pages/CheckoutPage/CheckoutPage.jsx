@@ -4,6 +4,7 @@ import Header from "../../Header/Header";
 import Footer from "../../shared/Footer/Footer";
 import { ShopContext } from "../../App";
 import { Form } from "react-router-dom";
+import { ButtonOrange } from "../../shared/Buttons";
 
 const TextInput = ({ name, placeholder, format }) => {
   const [inputValue, setInputValue] = useState("");
@@ -110,7 +111,7 @@ const Summary = () => {
   const grandTotal = total + shipping;
 
   return (
-    <div className="bg-white-900 grid gap-6 p-8 rounded-lg">
+    <div className="bg-white-900 grid gap-6 p-8 rounded-lg desktop:w-[350px] desktop:sticky desktop:top-[122px]">
       <h5>Summary</h5>
       <ul className="grid gap-6">
         {cartItems.map((item) => (
@@ -137,6 +138,7 @@ const Summary = () => {
           <h6 className="text-orange-900">&#36; {grandTotal}</h6>
         </div>
       </div>
+      <ButtonOrange text={"Continue and pay"} />
     </div>
   );
 };
@@ -144,9 +146,9 @@ const Summary = () => {
 const Checkout = () => {
   return (
     <div className="bg-grey-800">
-      <div className="container-center p-8 grid gap-8">
-        <Form className="grid gap-8">
-          <div className="bg-white-900 grid gap-12 p-8 rounded-lg">
+      <div className="container-center p-8 desktop:px-0 grid gap-8 ">
+        <Form className="grid gap-8 desktop:flex items-start">
+          <div className="bg-white-900 grid gap-12 p-8 rounded-lg flex-1">
             <h2>Checkout</h2>
 
             <div className="grid gap-4">

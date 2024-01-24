@@ -5,7 +5,7 @@ const ButtonOrange = ({ text, link }) => {
     <Link to={link}>
       <button
         style={defaultStyling}
-        className="text-white-900 bg-orange-900 hover:bg-orange-800 transition"
+        className="text-white-900 bg-orange-900 hover:bg-orange-800 transition w-full"
       >
         {text}
       </button>
