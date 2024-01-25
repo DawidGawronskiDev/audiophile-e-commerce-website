@@ -29,7 +29,6 @@ const CategoryPage = ({ category }) => {
   const products = loaderData.data.filter(
     (product) => product.category === loaderData.category
   );
-  console.log(products);
 
   return (
     <>
