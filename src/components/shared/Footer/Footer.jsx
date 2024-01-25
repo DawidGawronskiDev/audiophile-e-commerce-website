@@ -1,26 +1,7 @@
 import LogoImage from "/assets/shared/desktop/logo.svg";
 import { Link } from "react-router-dom";
 
-const NavLink = ({ name, link }) => {
-  return (
-    <li>
-      <Link to={link} className="sub-title hover:text-orange-800 transition">
-        {name}
-      </Link>
-    </li>
-  );
-};
-
-const NavLinks = () => {
-  return (
-    <ul className="flex flex-col tablet:flex-row items-center gap-4 tablet:gap-8 text-white-900">
-      <NavLink name={"Home"} link={"/"} /> {/* Corrected prop name to "link" */}
-      <NavLink name={"Headphones"} link={"/category/headphones"} />
-      <NavLink name={"Speakers"} link={"/category/speakers"} />
-      <NavLink name={"Earphones"} link={"/category/earphones"} />
-    </ul>
-  );
-};
+import NavLinks from "./NavLinks";
 
 const Footer = () => {
   return (
