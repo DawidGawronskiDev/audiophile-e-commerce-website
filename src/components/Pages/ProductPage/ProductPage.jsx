@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Header from "../../Header/Header";
 import Categories from "../../shared/Categories/Categories";
 import Testimonial from "../../shared/Testimonial/Testimonial";
@@ -207,6 +207,44 @@ const Gallery = ({ product }) => {
   );
 };
 
+const OtherItem = ({ item }) => {
+  const loaderData = useLoaderData();
+
+  const product = loaderData.data.find((product) => product.slug === item.slug);
+
+  return (
+    <li>
+      <Link
+        to={`/category/${product.category}/product/${product.slug}`}
+        className="grid gap-4"
+      >
+        <div className="bg-grey-900 aspect-video rounded-lg grid items-center">
+          <picture className="grid items-center justify-items-center">
+            <source src={item.image.mobile} media="(max-width: 375px)" />
+            <source src={item.image.tablet} media="(max-width: 768px)" />
+            <source src={item.image.desktop} media="(max-width: 1440px)" />
+            <img src={item.image.desktop} alt="" className="w-1/2" />
+          </picture>
+        </div>
+        <h4 className="text-center">{item.name}</h4>
+      </Link>
+    </li>
+  );
+};
+
+const Others = ({ product }) => {
+  return (
+    <div className="container-center grid gap-8">
+      <h3 className="text-center">You may also like</h3>
+      <ul className="grid gap-8">
+        {product.others.map((item, index) => (
+          <OtherItem key={index} item={item} />
+        ))}
+      </ul>
+    </div>
+  );
+};
+
 const ProductPage = () => {
   const loaderData = useLoaderData();
 
@@ -223,6 +261,7 @@ const ProductPage = () => {
         <Features product={product} />
         <Content product={product} />
         <Gallery product={product} />
+        <Others product={product} />
         <Categories />
         <Testimonial />
         <Footer />
