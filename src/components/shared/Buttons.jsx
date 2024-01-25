@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 
-const ButtonOrange = ({ text, link }) => {
+const ButtonOrange = ({ text, link, onClick, type = "button" }) => {
   return (
     <Link to={link}>
       <button
+        type={type}
+        onClick={onClick}
         style={defaultStyling}
         className="text-white-900 bg-orange-900 hover:bg-orange-800 transition w-full"
       >
