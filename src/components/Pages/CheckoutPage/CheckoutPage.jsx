@@ -35,7 +35,7 @@ const TextInput = ({ name, placeholder, format }) => {
         onChange={handleChange}
         className={`w-full px-8 py-4 text-[14px] decoration-orange-900 font-bold rounded-lg focus:outline-none border-solid border-[1px] border-black-900/25 focus:border-orange-900 caret-orange-900 ${
           !isValid ? `border-red-500` : ``
-        }`}
+        } ${inputValue.length > 0 ? `border-orange-900` : ``}`}
       />
     </div>
   );
