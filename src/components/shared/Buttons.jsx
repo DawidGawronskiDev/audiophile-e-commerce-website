@@ -13,6 +13,32 @@ const ButtonOrange = ({ text, link }) => {
   );
 };
 
+const ButtonBlack = ({ text, link }) => {
+  return (
+    <Link to={link}>
+      <button
+        style={defaultStyling}
+        className="text-white-900 bg-black-900 hover:bg-grey-700 transition w-full"
+      >
+        {text}
+      </button>
+    </Link>
+  );
+};
+
+const ButtonTransparent = ({ text, link }) => {
+  return (
+    <Link to={link}>
+      <button
+        style={defaultStyling}
+        className="text-black-900 hover:bg-black-900 hover:text-white-900 transition w-full  border-solid border-[1px] border-black-900"
+      >
+        {text}
+      </button>
+    </Link>
+  );
+};
+
 const defaultStyling = {
   padding: "16px 32px",
   fontWeight: "bold",
@@ -36,4 +62,4 @@ const ButtonShop = ({ text, name }) => {
   );
 };
 
-export { ButtonOrange, ButtonShop };
+export { ButtonOrange, ButtonBlack, ButtonTransparent, ButtonShop };
