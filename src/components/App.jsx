@@ -3,6 +3,9 @@ import { Outlet, useLocation } from "react-router-dom";
 import Cart from "./shared/Cart/Cart";
 import MainPage from "./Pages/MainPage/MainPage";
 import ScrollToTop from "./ScrollToTop";
+import Header from "./Header/Header";
+import Footer from "./shared/Footer/Footer";
+import Hero from "./Hero/Hero";
 
 const ShopContext = createContext({
   cartItems: [],
@@ -261,8 +264,12 @@ function App() {
         handleAddItem,
       }}
     >
-      <Cart />
-      {location.pathname === "/" ? <MainPage /> : <Outlet />}
+      <Header />
+      <div className="grid gap-32">
+        <Cart />
+        {location.pathname === "/" ? <MainPage /> : <Outlet />}
+        <Footer />
+      </div>
       <ScrollToTop />
     </ShopContext.Provider>
   );

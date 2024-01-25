@@ -9,14 +9,10 @@ import Showcase from "./Showcase";
 const MainPage = () => {
   return (
     <>
-      <Header />
-      <div className="grid gap-24">
-        <Hero />
-        <Categories />
-        <Showcase />
-        <Testimonial />
-        <Footer />
-      </div>
+      <Hero />
+      <Categories />
+      <Showcase />
+      <Testimonial />
     </>
   );
 };

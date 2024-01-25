@@ -18,10 +18,8 @@ const CheckoutPage = () => {
 
   return (
     <>
-      <Header />
       <div className="mt-[90px]"></div>
       <Checkout modalOpen={modalOpen} handleModalOpen={handleModalOpen} />
-      <Footer />
       <Modal modalOpen={modalOpen} />
     </>
   );

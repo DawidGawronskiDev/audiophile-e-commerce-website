@@ -35,18 +35,14 @@ const ProductPage = () => {
 
   return (
     <>
-      <div className="grid gap-32">
-        <Header />
-        <div className="mt-[90px]"></div>
-        <Product product={product} />
-        <Features product={product} />
-        <Content product={product} />
-        <Gallery product={product} />
-        <Others product={product} />
-        <Categories />
-        <Testimonial />
-        <Footer />
-      </div>
+      <div className="mt-[90px]"></div>
+      <Product product={product} />
+      <Features product={product} />
+      <Content product={product} />
+      <Gallery product={product} />
+      <Others product={product} />
+      <Categories />
+      <Testimonial />
     </>
   );
 };
