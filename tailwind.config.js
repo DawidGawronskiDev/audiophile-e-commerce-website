@@ -20,6 +20,7 @@ export default {
         grey: {
           900: "#F1F1F1",
           800: "#FAFAFA",
+          700: "#4C4C4C",
         },
         white: {
           900: "#FFFFFF",
