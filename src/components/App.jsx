@@ -265,7 +265,7 @@ function App() {
       }}
     >
       <Header />
-      <div className="grid gap-32">
+      <div className="grid gap-24">
         <Cart />
         {location.pathname === "/" ? <MainPage /> : <Outlet />}
         <Footer />

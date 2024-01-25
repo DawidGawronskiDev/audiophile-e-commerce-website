@@ -18,7 +18,7 @@ const CheckoutPage = () => {
 
   return (
     <>
-      <div className="mt-[90px]"></div>
+      <div></div>
       <Checkout modalOpen={modalOpen} handleModalOpen={handleModalOpen} />
       <Modal modalOpen={modalOpen} />
     </>
