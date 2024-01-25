@@ -52,9 +52,8 @@ const RadioInput = ({ name, placeholder, checked = false }) => {
     <div className="border-solid border-[1px] border-black-900/25 py-4 px-6 rounded-lg flex items-center gap-4 tablet:odd:col-start-2">
       <input
         type="radio"
-        id={name}
         name={name}
-        checked={isChecked}
+        defaultChecked={checked}
         onChange={handleRadioChange}
         className="relative grid items-center justify-items-center appearance-none aspect-square w-[20px] rounded-full border-solid border-[1px] border-black-900/50 after:absolute after:content-[''] after:aspect-square after:w-[10px] after:rounded-full checked:after:bg-orange-900"
       />
@@ -166,7 +165,7 @@ const Checkout = () => {
                   <TextInput
                     name={"name"}
                     placeholder={"Alexei Ward"}
-                    format={/^[A-Za-z]+$/}
+                    format={/^[A-Za-z\s]+$/}
                   />
                 </div>
                 <div className="grid gap-2">
@@ -176,7 +175,7 @@ const Checkout = () => {
                   <TextInput
                     name={"email"}
                     placeholder={"alexei@mail.com"}
-                    format={/^[A-Za-z]+$/}
+                    format={/^[^\s@]+@[^\s@]+\.[^\s@]+$/}
                   />
                 </div>
                 <div className="grid gap-2">
@@ -186,7 +185,7 @@ const Checkout = () => {
                   <TextInput
                     name={"phone"}
                     placeholder={"+1 202-555-0136"}
-                    format={/^[A-Za-z]+$/}
+                    format={/^\+?[0-9\s\-]+$/}
                   />
                 </div>
               </div>
@@ -205,7 +204,7 @@ const Checkout = () => {
                   <TextInput
                     name={"address"}
                     placeholder={"1137 Williams Avenue"}
-                    format={/^[A-Za-z]+$/}
+                    format={/^[A-Za-z0-9\s\-,]+$/}
                   />
                 </div>
                 <div className="grid gap-2">
@@ -215,7 +214,7 @@ const Checkout = () => {
                   <TextInput
                     name={"zipcode"}
                     placeholder={"10001"}
-                    format={/^[A-Za-z]+$/}
+                    format={/^\d{5}$/}
                   />
                 </div>
                 <div className="grid gap-2">
@@ -225,7 +224,7 @@ const Checkout = () => {
                   <TextInput
                     name={"city"}
                     placeholder={"New York"}
-                    format={/^[A-Za-z]+$/}
+                    format={/^[A-Za-z\s]+$/}
                   />
                 </div>
                 <div className="grid gap-2">
@@ -235,7 +234,7 @@ const Checkout = () => {
                   <TextInput
                     name={"country"}
                     placeholder={"United States"}
-                    format={/^[A-Za-z]+$/}
+                    format={/^[A-Za-z\s]+$/}
                   />
                 </div>
               </div>
@@ -277,7 +276,7 @@ const Checkout = () => {
                   <TextInput
                     name={"emoneynumber"}
                     placeholder={"238521993"}
-                    format={/^[A-Za-z]+$/}
+                    format={/^\d+$/}
                   />
                 </div>
                 <div className="grid gap-2">
@@ -287,7 +286,7 @@ const Checkout = () => {
                   <TextInput
                     name={"emoneypin"}
                     placeholder={"6891"}
-                    format={/^[A-Za-z]+$/}
+                    format={/^\d{4}$/}
                   />
                 </div>
               </div>
