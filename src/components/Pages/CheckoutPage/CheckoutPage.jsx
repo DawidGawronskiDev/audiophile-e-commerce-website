@@ -92,7 +92,7 @@ const CartItem = ({ item }) => {
   );
 };
 
-const Summary = () => {
+const Summary = ({ handleModalOpen }) => {
   const { cartItems } = useContext(ShopContext);
 
   const total = cartItems.reduce((acc, val) => {
@@ -139,12 +139,16 @@ const Summary = () => {
           <h6 className="text-orange-900">&#36; {grandTotal}</h6>
         </div>
       </div>
-      <ButtonOrange text={"Continue and pay"} />
+      <ButtonOrange
+        type={"submit"}
+        text={"Continue and pay"}
+        onClick={handleModalOpen}
+      />
     </div>
   );
 };
 
-const Checkout = () => {
+const Checkout = ({ handleModalOpen }) => {
   return (
     <div className="bg-grey-800">
       <div className="container-center p-4 mobile:p-8 desktop:px-0 grid gap-8 ">
@@ -292,20 +296,103 @@ const Checkout = () => {
               </div>
             </div>
           </div>
-          <Summary />
+          <Summary handleModalOpen={handleModalOpen} />
         </Form>
       </div>
     </div>
   );
 };
 
+const ModalItem = ({ item }) => {
+  const name = item.name
+    .split(" ")
+    .reduce((acc, val) => {
+      if (val.length < 5) {
+        acc.push(val);
+      }
+      return acc;
+    }, [])
+    .join(" ");
+
+  return (
+    <li className="flex items-center gap-4 text-[15px]">
+      <div className="w-16 aspect-square">
+        <img src={item.image.mobile} alt="" className="rounded-lg " />
+      </div>
+      <div className="flex-1">
+        <h6 className="leading-[25px]">{name}</h6>
+        <span className="font-bold text-black-900/50 text-[14px] leading-[25px]">
+          &#36; {item.price}
+        </span>
+      </div>
+      <span className="text-black-900/50 font-bold">x{item.quantity}</span>
+    </li>
+  );
+};
+
+const Modal = ({ modalOpen }) => {
+  const { cartItems } = useContext(ShopContext);
+
+  return (
+    <div className={`${modalOpen ? `block` : `hidden`}`}>
+      <div className="fixed z-50 top-0 left-1/2 -translate-x-1/2 container-center w-full h-[calc(100dvh_-_90px)] mt-[90px] tablet:grid items-start justify-items-end">
+        <div className="z-40 bg-white-900 p-2 mobile:p-12 rounded-lg grid gap-8 my-8 tablet:w-[450px]">
+          <img src={"/assets/checkout/icon-order-confirmation.svg"} alt="" />
+          <h3>Thank You for your order</h3>
+          <p className="body text-black-900/50">
+            You will receive an email confirmation shortly.
+          </p>
+          <div className="rounded-lg overflow-hidden">
+            <div className="bg-grey-900 p-6 grid gap-2">
+              <ul>
+                <ModalItem item={cartItems[0]} />
+              </ul>
+              {cartItems.length > 1 && (
+                <>
+                  <div className="h-[1px] bg-black-900/25"></div>
+                  <span className="text-black-900/50 text-center">
+                    {cartItems.length === 2
+                      ? `And 1 more item`
+                      : `And ${cartItems.length - 1} more items`}
+                  </span>
+                </>
+              )}
+            </div>
+            <div className="bg-black-900 p-6">
+              <span className="text-white-900/50 uppercase">Grand total</span>
+              <h6 className="text-white-900">
+                &#36;{" "}
+                {cartItems.reduce((acc, val) => {
+                  acc += val.quantity + val.price;
+                  return acc;
+                }, 50)}
+              </h6>
+            </div>
+          </div>
+          <ButtonOrange text={"Back to home"} link={"/"} />
+        </div>
+      </div>
+      <div className="fixed z-40 top-0 left-0 bg-black-900/25 w-[100dvw] h-[100dvh]"></div>
+    </div>
+  );
+};
+
 const CheckoutPage = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  console.log(modalOpen);
+
+  const handleModalOpen = () => {
+    setModalOpen(!modalOpen);
+  };
+
   return (
     <>
       <Header />
       <div className="mt-[90px]"></div>
-      <Checkout />
+      <Checkout modalOpen={modalOpen} handleModalOpen={handleModalOpen} />
       <Footer />
+      <Modal modalOpen={modalOpen} />
     </>
   );
 };
