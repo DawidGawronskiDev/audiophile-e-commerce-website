@@ -103,10 +103,12 @@ const Summary = () => {
 
   const shipping = 50;
 
-  const vat = cartItems.reduce((acc, val) => {
-    acc += val.quantity * val.price * 0.2;
-    return acc;
+  const vatInCents = cartItems.reduce((acc, val) => {
+    const itemVat = val.quantity * val.price * 0.2 * 100; // Representing in cents
+    return acc + Math.round(itemVat);
   }, 0);
+
+  const vatInDollars = vatInCents / 100; // Convert back to dollars (or your currency)
 
   const grandTotal = total + shipping;
 
@@ -130,7 +132,7 @@ const Summary = () => {
           </div>
           <div className="flex">
             <span className="flex-1 text-black-900/50">VAT (Included)</span>
-            <h6>&#36; {vat}</h6>
+            <h6>&#36; {vatInDollars}</h6>
           </div>
         </div>
         <div className="flex">
