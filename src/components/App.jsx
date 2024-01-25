@@ -14,7 +14,6 @@ const ShopContext = createContext({
 
 function App() {
   const location = useLocation();
-  console.log(location);
 
   const [cartItems, setCartItems] = useState([
     {
