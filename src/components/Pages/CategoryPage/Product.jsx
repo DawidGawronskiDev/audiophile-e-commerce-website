@@ -3,24 +3,24 @@ import { ButtonOrange } from "../../shared/Buttons";
 const Product = ({ product }) => {
   return (
     <li className="flex flex-col gap-8 desktop:flex-row desktop:even:flex-row-reverse">
-      <div className="overflow-hidden rounded-lg aspect-square bg-grey-900 tablet:aspect-video tablet:grid tablet:items-center desktop:aspect-square">
-        <picture className="flex justify-center">
+      <div className="flex-1 overflow-hidden rounded-lg aspect-square bg-grey-900 tablet:aspect-video grid items-center desktop:aspect-square">
+        <picture className="grid items-center justify-items-center">
           <source
-            src={product.categoryImage.desktop}
-            media="(max-width: 1440px)"
+            src={product.categoryImage.mobile}
+            media="(max-width: 375px)"
           />
           <source
             src={product.categoryImage.tablet}
             media="(max-width: 768px)"
           />
           <source
-            src={product.categoryImage.mobile}
-            media="(max-width: 375px)"
+            src={product.categoryImage.desktop}
+            media="(max-width: 1440px)"
           />
           <img
             src={product.categoryImage.desktop}
             alt=""
-            className="w-full tablet:w-1/3 desktop:w-3/4"
+            className="mobile:w-1/2 desktop:w-[410px] translate-y-4"
           />
         </picture>
       </div>

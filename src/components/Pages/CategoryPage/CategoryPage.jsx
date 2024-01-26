@@ -7,31 +7,17 @@ import Testimonial from "../../shared/Testimonial/Testimonial";
 
 import Products from "./Products";
 
-async function loader(params) {
-  const fetchData = async () => {
-    try {
-      const response = await fetch("/data.json");
-      const data = await response.json();
-
-      return { data, category: params.params.category };
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  return fetchData();
+async function loader(response) {
+  return response.params.category;
 }
 
-const CategoryPage = ({ category }) => {
-  const loaderData = useLoaderData();
-  const products = loaderData.data.filter(
-    (product) => product.category === loaderData.category
-  );
+const CategoryPage = () => {
+  const category = useLoaderData();
 
   return (
     <>
-      <Hero title={loaderData.category} />
-      <Products products={products} />
+      <Hero title={category} />
+      <Products category={category} />
       <Categories />
       <Testimonial />
     </>
