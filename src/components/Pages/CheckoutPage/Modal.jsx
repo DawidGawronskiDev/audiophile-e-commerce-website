@@ -10,7 +10,7 @@ const Modal = ({ modalOpen }) => {
   return (
     <div className={`${modalOpen ? `block` : `hidden`}`}>
       <div className="fixed z-50 top-0 left-1/2 -translate-x-1/2 tablet:top-1/2 tablet:-translate-y-1/2 container-center w-full h-[calc(100dvh_-_90px)] tablet:grid tablet:items-center tablet:justify-items-center">
-        <div className="z-40 bg-white-900 p-2 mobile:p-12 rounded-lg grid gap-8 my-8 tablet:w-[600px]">
+        <div className="z-40 bg-white-900 p-4 tablet:p-12 rounded-lg grid gap-4 tablet:gap-8 my-8 tablet:w-[600px]">
           <img src={"/assets/checkout/icon-order-confirmation.svg"} alt="" />
           <h3>Thank You for your order</h3>
           <p className="body text-black-900/50">

@@ -19,7 +19,7 @@ const OtherItem = ({ item }) => {
             <img src={item.image.desktop} alt="" className="w-1/2" />
           </picture>
         </div>
-        <h4 className="text-center">{item.name}</h4>
+        <h5 className="text-center">{item.name}</h5>
       </Link>
     </li>
   );

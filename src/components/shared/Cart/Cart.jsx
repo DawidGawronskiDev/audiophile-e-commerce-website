@@ -21,7 +21,9 @@ const Cart = () => {
               }, 0)}
               )
             </h6>
-            <button className="text-black-900/50">Remove All</button>
+            <button className="text-black-900/50">
+              <h6>Remove All </h6>
+            </button>
           </div>
           <ul className="grid gap-6">
             {cartItems.map((item) => (
@@ -29,7 +31,9 @@ const Cart = () => {
             ))}
           </ul>
           <div className="flex">
-            <span className="flex-1 uppercase">Total</span>
+            <span className="flex-1 uppercase text-overline text-black-900/50 tracking-normal">
+              Total
+            </span>
             <h6>
               &#36;{" "}
               {cartItems.reduce((acc, val) => {

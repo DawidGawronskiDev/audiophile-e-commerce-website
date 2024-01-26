@@ -10,11 +10,13 @@ const Checkout = ({ handleModalOpen }) => {
       <div className="container-center p-4 mobile:p-8 desktop:px-0 grid gap-8 ">
         <Form className="grid gap-8 desktop:flex items-start">
           <div className="bg-white-900 grid gap-12 p-4 mobile:p-8 rounded-lg flex-1">
-            <h2>Checkout</h2>
+            <h3>Checkout</h3>
 
             <div className="grid gap-4">
               <legend>
-                <h6 className="text-orange-900 text-[13px]">Billing details</h6>
+                <span className="text-orange-900 sub-title font-bold">
+                  Billing details
+                </span>
               </legend>
 
               <div className="grid gap-6 tablet:grid-cols-2">
@@ -53,7 +55,9 @@ const Checkout = ({ handleModalOpen }) => {
 
             <div className="grid gap-4">
               <legend>
-                <h6 className="text-orange-900 text-[13px]">Shipping info</h6>
+                <span className="text-orange-900 sub-title font-bold">
+                  Shipping info
+                </span>
               </legend>
 
               <div className="grid gap-6  tablet:grid-cols-2">
@@ -102,7 +106,9 @@ const Checkout = ({ handleModalOpen }) => {
 
             <div className="grid gap-4">
               <legend>
-                <h6 className="text-orange-900 text-[13px]">Payment details</h6>
+                <span className="text-orange-900 sub-title font-bold">
+                  Payment details
+                </span>
               </legend>
 
               <div className="grid gap-6">
