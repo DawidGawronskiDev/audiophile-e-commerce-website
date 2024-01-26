@@ -14,7 +14,7 @@ const Hero = ({ title }) => {
   }
 
   return (
-    <section className="bg-black-900 mt-[90px] h-[calc(100dvh_-_90px)] desktop::h-[729px]">
+    <section className="bg-black-900 mt-[90px] h-[calc(100dvh_-_90px)] desktop:h-[729px]">
       <div
         className={`container-center h-[100%] grid items-center justify-center desktop:justify-start bg-hero`}
       >
