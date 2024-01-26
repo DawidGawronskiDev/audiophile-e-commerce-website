@@ -39,7 +39,7 @@ const Header = () => {
           <CartButton />
         </div>
         <div className={`tablet:hidden ${menuVisible ? `block` : `hidden`}`}>
-          <div className="mt-[10px] pt-20 pb-8 bg-white-900">
+          <div className="pt-16 pb-8 bg-white-900">
             <Categories />
           </div>
           <div className="fixed w-[100dvw] h-[100dvh] bg-black-900/25"></div>

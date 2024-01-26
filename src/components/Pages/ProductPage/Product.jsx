@@ -32,7 +32,7 @@ const Product = ({ product }) => {
           {product.new && (
             <span className="text-overline text-orange-900">New product</span>
           )}
-          <h2>{product.name}</h2>
+          <h4>{product.name}</h4>
           <span className="body opacity-50 tablet:max-w-[445px]">
             {product.description}
           </span>

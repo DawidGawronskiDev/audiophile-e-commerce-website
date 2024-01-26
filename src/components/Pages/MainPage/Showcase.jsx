@@ -30,7 +30,7 @@ const Showcase = () => {
             />
           </picture>
           <div className="max-w-[350px] z-30 grid gap-6 desktop:self-center desktop:justify-self-start desktop:text-left desktop:justify-items-start">
-            <h4 className="text-white-900">ZX9 SPEAKER</h4>
+            <h1 className="text-white-900">ZX9 SPEAKER</h1>
             <span className="body text-white-900/50">
               Upgrade to premium speakers that are phenomenally built to deliver
               truly remarkable sound.
