@@ -1,11 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useLoaderData } from "react-router-dom";
-import Header from "../../Header/Header";
 import Hero from "../../Hero/Hero";
 
 import Categories from "../../shared/Categories/Categories";
 import Testimonial from "../../shared/Testimonial/Testimonial";
-import Footer from "../../shared/Footer/Footer";
 
 import Products from "./Products";
 
