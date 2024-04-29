@@ -1,4 +1,5 @@
 import CategoryList from "../components/CategoryList";
+import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Testimonial from "../components/Testimonial";
 
@@ -8,6 +9,7 @@ const MainPage = () => {
       <Hero />
       <CategoryList />
       <Testimonial />
+      <Footer />
     </>
   );
 };
