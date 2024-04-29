@@ -1,5 +1,11 @@
+import Hero from "../components/Hero";
+
 const MainPage = () => {
-  return <h1>MainPage!</h1>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default MainPage;
