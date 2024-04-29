@@ -6,7 +6,7 @@ import SpeakersImage from "/src/assets/shared/desktop/image-category-thumbnail-s
 
 const CategoryList = () => {
   return (
-    <ul className="mx-6 my-16 flex flex-col items-center justify-center gap-16">
+    <ul className="mx-6 flex flex-col items-center justify-center gap-16">
       <CategoryItem image={HeadphonesImage} label="Headphones" url="" />
       <CategoryItem image={SpeakersImage} label="Speakers" url="" />
       <CategoryItem image={EarphonesImage} label="Earphones" url="" />

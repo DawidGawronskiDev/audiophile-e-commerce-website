@@ -3,7 +3,9 @@ import { Outlet } from "react-router-dom";
 const RootLayout = () => {
   return (
     <>
-      <Outlet />
+      <main className="grid gap-32">
+        <Outlet />
+      </main>
     </>
   );
 };
