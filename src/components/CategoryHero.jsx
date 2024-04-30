@@ -1,9 +1,10 @@
 import React from "react";
+import HeadingL from "./UI/HeadingL";
 
 const CategoryHero = ({ children }) => {
   return (
     <div className="bg-black text-white py-8 text-center">
-      <h2 className="font-bold text-3xl tracking-wide uppercase">{children}</h2>
+      <HeadingL>{children}</HeadingL>
     </div>
   );
 };

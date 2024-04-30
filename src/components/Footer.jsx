@@ -4,6 +4,7 @@ import LogoImage from "/src/assets/shared/desktop/logo.svg";
 import FacebookImage from "/src/assets/shared/desktop/icon-facebook.svg";
 import TwitterImage from "/src/assets/shared/desktop/icon-twitter.svg";
 import InstagramImage from "/src/assets/shared/desktop/icon-instagram.svg";
+import Body from "./UI/Body";
 
 const Footer = () => {
   return (
@@ -23,12 +24,12 @@ const Footer = () => {
           <Link to="/">Earphones</Link>
         </li>
       </ul>
-      <p className="font-medium font-base leading-relaxed opacity-50">
+      <Body color="white">
         Audiophile is an all in one stop to fulfill your audio needs. We&apos;re
         a small team of music lovers and sound specialists who are devoted to
         helping you get the most out of personal audio. Come and visit our demo
         facility - we’re open 7 days a week.
-      </p>
+      </Body>
       <p className="font-bold text-base opacity-50">
         Copyright 2021. All Rights Reserved
       </p>

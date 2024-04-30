@@ -7,9 +7,17 @@ import SpeakersImage from "/src/assets/shared/desktop/image-category-thumbnail-s
 const CategoryList = () => {
   return (
     <ul className="mx-6 flex flex-col items-center justify-center gap-16">
-      <CategoryItem image={HeadphonesImage} label="Headphones" url="" />
-      <CategoryItem image={SpeakersImage} label="Speakers" url="" />
-      <CategoryItem image={EarphonesImage} label="Earphones" url="" />
+      <CategoryItem
+        image={HeadphonesImage}
+        label="Headphones"
+        link="/headphones"
+      />
+      <CategoryItem image={SpeakersImage} label="Speakers" link="/speakers" />
+      <CategoryItem
+        image={EarphonesImage}
+        label="Earphones"
+        link="/earphones"
+      />
     </ul>
   );
 };
