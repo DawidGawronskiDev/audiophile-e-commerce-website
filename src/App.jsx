@@ -4,6 +4,7 @@ import RootLayout from "./pages/Root";
 import MainPage from "./pages/Main";
 import HeadphonesPage from "./pages/Headphones";
 import SpeakersPage from "./pages/Speakers";
+import EarphonesPage from "./pages/Earphones";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "speakers",
         element: <SpeakersPage />,
+      },
+      {
+        path: "earphones",
+        element: <EarphonesPage />,
       },
     ],
   },

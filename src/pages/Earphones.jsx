@@ -4,11 +4,11 @@ import Testimonial from "../components/Testimonial";
 import ProductList from "../components/ProductList";
 import CategoryHero from "../components/CategoryHero";
 
-const HeadphonesPage = () => {
+const EarphonesPage = () => {
   return (
     <>
-      <CategoryHero>Headphones</CategoryHero>
-      <ProductList type="headphones" />
+      <CategoryHero>Earphones</CategoryHero>
+      <ProductList type="earphones" />
       <CategoryList />
       <Testimonial />
       <Footer />
@@ -16,4 +16,4 @@ const HeadphonesPage = () => {
   );
 };
 
-export default HeadphonesPage;
+export default EarphonesPage;
