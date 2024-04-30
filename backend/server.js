@@ -1,9 +1,12 @@
-require("dotenv").config();
+/* eslint-disable no-undef */
 
+require("dotenv").config();
+const path = require("path");
 // ******************** APP ********************
 
 const express = require("express");
 const app = express();
+app.use(express.static(path.join(__dirname, "public")));
 
 // ******************** CORS ********************
 
