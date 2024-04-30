@@ -4,8 +4,12 @@ import { cartActions } from "../store/cartSlice";
 import HeadingXXS from "./UI/HeadingXXS";
 
 const Cart = () => {
-  const { isCartVisible } = useSelector((state) => state.cart);
+  const { isCartVisible, items } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+
+  const itemsQuantity = items.reduce((acc, cur) => {
+    return acc + cur.quantity;
+  }, 0);
 
   const onClose = () => {
     dispatch(cartActions.hideCart());
@@ -13,7 +17,7 @@ const Cart = () => {
 
   return (
     <Modal open={isCartVisible} onClose={() => onClose()}>
-      <HeadingXXS>Cart (0)</HeadingXXS>
+      <HeadingXXS>Cart ({itemsQuantity})</HeadingXXS>
     </Modal>
   );
 };
