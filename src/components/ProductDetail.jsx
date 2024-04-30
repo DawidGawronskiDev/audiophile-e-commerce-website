@@ -24,19 +24,22 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="m-6 grid gap-8">
-      <ProductImage product={product} />
-      <div className="grid gap-6">
-        {product.new && <Overline orange>New Product</Overline>}
-        <HeadingL>{product.name}</HeadingL>
-        <Body>
-          The new XX99 Mark II headphones is the pinnacle of pristine audio. It
-          redefines your premium headphone experience by reproducing the
-          balanced depth and precision of studio-quality sound.
-        </Body>
+    <>
+      <div />
+      <div className="m-6 grid gap-8">
+        <ProductImage product={product} />
+        <div className="grid gap-6">
+          {product.new && <Overline orange>New Product</Overline>}
+          <HeadingL>{product.name}</HeadingL>
+          <Body>
+            The new XX99 Mark II headphones is the pinnacle of pristine audio.
+            It redefines your premium headphone experience by reproducing the
+            balanced depth and precision of studio-quality sound.
+          </Body>
+        </div>
+        <Price price={product.price} />
       </div>
-      <Price price={product.price} />
-    </div>
+    </>
   );
 };
 
