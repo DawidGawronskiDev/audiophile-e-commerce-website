@@ -6,6 +6,8 @@ import HeadphonesPage from "./pages/Headphones";
 import SpeakersPage from "./pages/Speakers";
 import EarphonesPage from "./pages/Earphones";
 import ProductPage from "./pages/Product";
+import { Provider } from "react-redux";
+import store from "./store/store";
 
 const router = createBrowserRouter([
   {
@@ -38,7 +40,11 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  );
 };
 
 export default App;
