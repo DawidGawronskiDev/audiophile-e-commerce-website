@@ -1,38 +1,12 @@
-import { useEffect, useState } from "react";
 import ProductItem from "./ProductItem";
+import useFetch from "../hooks/useFetch";
 
 const ProductList = ({ type }) => {
-  const [products, setProducts] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    setIsLoading(true);
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch("src/data.json");
-
-        if (!response.ok) {
-          throw json({ message: "Failed to fetch products" });
-        }
-
-        const responseData = await response.json();
-
-        const products = responseData.filter(
-          (product) => product.category === type,
-        );
-
-        setProducts(products);
-      } catch (error) {
-        console.error(error);
-        setError(error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, [type]);
+  const {
+    data: products,
+    isLoading,
+    error,
+  } = useFetch(`http://localhost:3000/api/v1/category/${type}`);
 
   if (isLoading) {
     return <p>Loading...</p>;
