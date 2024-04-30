@@ -1,8 +1,13 @@
+/* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
+
 const ProductItem = ({ product }) => {
+  const imageSrc = "http://localhost:3000" + product.image.mobile;
+
   return (
     <li key={product.name} className="grid gap-8">
       <img
-        src={product.image.mobile}
+        src={imageSrc}
         alt={`Image of ${product.name}`}
         className="rounded-lg"
       />
@@ -21,7 +26,7 @@ const ProductItem = ({ product }) => {
           balanced depth and precision of studio-quality sound.
         </p>
         <button className="bg-orange-600 px-8 py-4 uppercase text-sm font-bold m-auto text-white">
-          See product
+          <Link to={`/product/${product.slug}`}>See product</Link>
         </button>
       </div>
     </li>
