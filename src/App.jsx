@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./pages/Root";
 import MainPage from "./pages/Main";
 import HeadphonesPage from "./pages/Headphones";
+import SpeakersPage from "./pages/Speakers";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "headphones",
         element: <HeadphonesPage />,
+      },
+      {
+        path: "speakers",
+        element: <SpeakersPage />,
       },
     ],
   },
