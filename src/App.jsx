@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import RootLayout from "./pages/Root";
 import MainPage from "./pages/Main";
+import HeadphonesPage from "./pages/Headphones";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
         path: "",
         index: true,
         element: <MainPage />,
+      },
+      {
+        path: "headphones",
+        element: <HeadphonesPage />,
       },
     ],
   },
