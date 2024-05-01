@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
-import { useDispatch } from "react-redux";
-import Body from "./UI/Body";
-import Price from "./UI/Price";
-import QuantityButton from "./UI/QuantityButton";
-import { cartActions } from "../store/cartSlice";
 import { useEffect, useState } from "react";
-import shortenName from "../utils/shortenName";
+import { cartActions } from "../../store/cartSlice";
+import { useDispatch } from "react-redux";
+
+import Body from "../UI/Body";
+import QuantityButton from "../UI/QuantityButton";
+import Price from "../UI/Price";
+
+import shortenName from "../../utils/shortenName";
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();

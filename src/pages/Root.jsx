@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
-import Cart from "../components/Cart/Cart";
 import ScrollToTop from "../components/ScrollToTop";
+import Cart from "../components/Cart/Cart";
 
 const RootLayout = () => {
   return (

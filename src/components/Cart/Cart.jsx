@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import Modal from "../UI/Modal";
 import { cartActions } from "../../store/cartSlice";
+
+import Modal from "../UI/Modal";
 import HeadingXXS from "../UI/HeadingXXS";
-import Price from "../UI/Price";
 import CartList from "./CartList";
+import Price from "../UI/Price";
 
 const Cart = () => {
   const { isCartVisible, items } = useSelector((state) => state.cart);
