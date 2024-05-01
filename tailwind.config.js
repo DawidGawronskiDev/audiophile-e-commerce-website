@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
+        circles: "url('src/assets/home/desktop/pattern-circles.svg')",
         "hero-mobile": "url('src/assets/home/mobile/image-header.jpg')",
+        "showcase-speaker-mobile":
+          "url(src/assets/home/mobile/image-speaker-zx7.jpg)",
       },
     },
   },
