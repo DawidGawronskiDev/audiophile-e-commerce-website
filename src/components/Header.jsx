@@ -3,7 +3,7 @@ import CartIcon from "../assets/shared/desktop/icon-cart.svg";
 import LogoImage from "../assets/shared/desktop/logo.svg";
 import CategoryList from "./CategoryList";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../store/cartSlice";
 
@@ -31,7 +31,9 @@ const Header = () => {
         <button onClick={handleMenu}>
           <img src={HamburgerIcon} alt="Menu" />
         </button>
-        <img src={LogoImage} alt="Logo" />
+        <Link to="/">
+          <img src={LogoImage} alt="Logo" />
+        </Link>
         <button onClick={openCart}>
           <img src={CartIcon} alt="Cart" />
         </button>
