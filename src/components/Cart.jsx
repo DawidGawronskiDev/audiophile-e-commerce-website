@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Modal from "./UI/Modal";
 import { cartActions } from "../store/cartSlice";
 import HeadingXXS from "./UI/HeadingXXS";
+import CartItem from "./CartItem";
 
 const Cart = () => {
   const { isCartVisible, items } = useSelector((state) => state.cart);
@@ -15,9 +16,18 @@ const Cart = () => {
     dispatch(cartActions.hideCart());
   };
 
+  console.log(items);
+
   return (
     <Modal open={isCartVisible} onClose={() => onClose()}>
-      <HeadingXXS>Cart ({itemsQuantity})</HeadingXXS>
+      <div className="grid gap-8">
+        <HeadingXXS>Cart ({itemsQuantity})</HeadingXXS>
+        <ul className="flex flex-col gap-6">
+          {items.map((item) => (
+            <CartItem key={item.id} item={item} />
+          ))}
+        </ul>
+      </div>
     </Modal>
   );
 };
