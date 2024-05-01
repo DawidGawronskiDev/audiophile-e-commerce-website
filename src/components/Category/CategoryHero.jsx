@@ -1,5 +1,5 @@
 import React from "react";
-import HeadingL from "./UI/HeadingL";
+import HeadingL from "../UI/HeadingL";
 
 const CategoryHero = ({ children }) => {
   return (

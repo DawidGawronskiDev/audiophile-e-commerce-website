@@ -1,5 +1,5 @@
-import Body from "./UI/Body";
-import HeadingL from "./UI/HeadingL";
+import Body from "../UI/Body";
+import HeadingL from "../UI/HeadingL";
 
 const ProductIncludes = ({ includes }) => {
   return (

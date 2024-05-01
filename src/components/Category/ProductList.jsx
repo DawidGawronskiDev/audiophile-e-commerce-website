@@ -1,5 +1,5 @@
-import ProductItem from "./ProductItem";
-import useFetch from "../hooks/useFetch";
+import ProductItem from "../ProductItem";
+import useFetch from "../../hooks/useFetch";
 
 const ProductList = ({ type }) => {
   const {

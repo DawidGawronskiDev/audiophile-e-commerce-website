@@ -1,6 +1,4 @@
 const ProductGallery = ({ gallery }) => {
-  console.log(Object.values(gallery));
-
   return (
     <div className="mx-6">
       <ul className="grid gap-5">

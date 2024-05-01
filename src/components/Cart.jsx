@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import Modal from "./UI/Modal";
-import { cartActions } from "../store/cartSlice";
-import HeadingXXS from "./UI/HeadingXXS";
-import Price from "./UI/Price";
+import Modal from "../UI/Modal";
+import { cartActions } from "../../store/cartSlice";
+import HeadingXXS from "../UI/HeadingXXS";
+import Price from "../UI/Price";
 import CartList from "./CartList";
 
 const Cart = () => {

@@ -1,6 +1,6 @@
 import CartItem from "./CartItem";
 
-const CartList = ({ items }) => {
+const CartList = ({ items = [] }) => {
   return (
     <ul className="flex flex-col gap-6">
       {items.length > 0 ? (

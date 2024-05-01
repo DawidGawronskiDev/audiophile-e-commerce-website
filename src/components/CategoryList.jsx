@@ -1,4 +1,4 @@
-import CategoryItem from "./CategoryItem";
+import CategoryItem from "./Category/CategoryItem";
 
 import EarphonesImage from "/src/assets/shared/desktop/image-category-thumbnail-earphones.png";
 import HeadphonesImage from "/src/assets/shared/desktop/image-category-thumbnail-headphones.png";
