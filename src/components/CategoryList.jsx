@@ -1,4 +1,4 @@
-import CategoryItem from "./Category/CategoryItem";
+import CategoryItem from "./CategoryItem";
 
 import EarphonesImage from "/src/assets/shared/desktop/image-category-thumbnail-earphones.png";
 import HeadphonesImage from "/src/assets/shared/desktop/image-category-thumbnail-headphones.png";
@@ -6,7 +6,7 @@ import SpeakersImage from "/src/assets/shared/desktop/image-category-thumbnail-s
 
 const CategoryList = () => {
   return (
-    <ul className="mx-6 flex flex-col items-center justify-center gap-16">
+    <ul className="mx-6 grid gap-16 sm:gap-3 sm:grid-cols-3">
       <CategoryItem
         image={HeadphonesImage}
         label="Headphones"

@@ -1,11 +1,20 @@
 import Body from "./UI/Body";
 import HeadingL from "./UI/HeadingL";
+
+import DynamicImage from "./UI/DynamicImage";
+
 import ImageMobile from "/src/assets/shared/mobile/image-best-gear.jpg";
+import ImageTablet from "/src/assets/shared/tablet/image-best-gear.jpg";
+import ImageDesktop from "/src/assets/shared/desktop/image-best-gear.jpg";
 
 const Testimonial = () => {
   return (
     <div className="mx-6 flex flex-col gap-10 text-center">
-      <img src={ImageMobile} alt="" className="rounded-lg" />
+      <DynamicImage
+        mobile={ImageMobile}
+        tablet={ImageTablet}
+        desktop={ImageDesktop}
+      />
       <HeadingL>
         Bringing you the <span className="text-orange-600">best</span> audio
         gear

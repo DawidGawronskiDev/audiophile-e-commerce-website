@@ -27,11 +27,11 @@ const Header = () => {
 
   return (
     <div className="fixed top-0 left-0 z-50 w-full bg-white">
-      <header className="px-6 py-8 bg-black text-white flex items-center justify-between h-24">
+      <header className="px-6 py-8 bg-black text-white flex items-center justify-between h-24 sm:gap-12">
         <button onClick={handleMenu}>
           <img src={HamburgerIcon} alt="Menu" />
         </button>
-        <Link to="/">
+        <Link to="/" className="sm:flex-1">
           <img src={LogoImage} alt="Logo" />
         </Link>
         <button onClick={openCart}>

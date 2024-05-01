@@ -6,7 +6,7 @@ const CategoryItem = ({ image, label, link }) => {
       <img
         src={image}
         alt={`Image of ${label}`}
-        className="-translate-y-1/4 w-28"
+        className="-translate-y-1/4 w-28 sm:w-2/3"
       />
       <h3 className="font-bold text-base tracking-wide uppercase">{label}</h3>
       <button className="font-bold text-sm uppercase opacity-50">
