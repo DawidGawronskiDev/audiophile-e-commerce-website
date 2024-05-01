@@ -2,7 +2,6 @@ import Body from "./UI/Body";
 import HeadingL from "./UI/HeadingL";
 
 const ProductIncludes = ({ includes }) => {
-  console.log(includes);
   return (
     <div className="mx-6 flex flex-col gap-6">
       <HeadingL>

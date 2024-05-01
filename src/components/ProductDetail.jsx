@@ -8,6 +8,7 @@ import Price from "./UI/Price";
 import AddToCart from "./UI/AddToCart";
 import ProductFeatures from "./ProductFeatures";
 import ProductIncludes from "./ProductIncludes";
+import ProductGallery from "./ProductGallery";
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -45,6 +46,7 @@ const ProductDetail = () => {
       </div>
       <ProductFeatures features={product.features} />
       <ProductIncludes includes={product.includes} />
+      <ProductGallery gallery={product.gallery} />
     </>
   );
 };
