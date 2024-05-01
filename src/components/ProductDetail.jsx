@@ -6,6 +6,7 @@ import HeadingL from "./UI/HeadingL";
 import ProductImage from "./ProductImage";
 import Price from "./UI/Price";
 import AddToCart from "./UI/AddToCart";
+import ProductFeatures from "./ProductFeatures";
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -41,6 +42,7 @@ const ProductDetail = () => {
         <Price price={product.price} />
         <AddToCart product={product} />
       </div>
+      <ProductFeatures features={product.features} />
     </>
   );
 };
