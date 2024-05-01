@@ -17,17 +17,28 @@ const cartSlice = createSlice({
     },
     addItem: (state, action) => {
       const { item, quantity } = action.payload;
-
-      const newItem = item;
-      const existingItemIndex = state.items.findIndex(
-        (item) => item.id === newItem.id,
+      const existingItem = state.items.find(
+        (existingItem) => existingItem.id === item.id,
       );
 
-      if (existingItemIndex !== -1) {
-        state.items[existingItemIndex].quantity =
-          state.items[existingItemIndex].quantity + quantity;
+      if (!existingItem) {
+        state.items.push({ ...item, quantity: 1 });
       } else {
-        state.items.push({ ...newItem, quantity: quantity });
+        existingItem.quantity += quantity; // Increment the quantity
+      }
+    },
+    substractItem: (state, action) => {
+      const itemId = action.payload;
+      const existingItem = state.items.find((item) => item.id === itemId);
+
+      if (!existingItem) {
+        return state;
+      }
+
+      if (existingItem.quantity === 1) {
+        state.items = state.items.filter((item) => item.id !== itemId);
+      } else {
+        existingItem.quantity--;
       }
     },
   },
