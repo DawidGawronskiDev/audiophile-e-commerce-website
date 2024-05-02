@@ -19,7 +19,7 @@ export default function Modal({ children, open, onClose, ...props }) {
       onClose={onClose}
       ref={ref}
       {...props}
-      className="w-full p-8 rounded-lg"
+      className="w-full rounded-lg p-4 md:m-0 md:open:fixed md:top-28 md:left-full md:-translate-x-dialog md:max-w-lg"
     >
       {children}
     </dialog>,

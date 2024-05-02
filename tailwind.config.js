@@ -9,6 +9,9 @@ export default {
         "showcase-speaker-mobile":
           "url(src/assets/home/mobile/image-speaker-zx7.jpg)",
       },
+      translate: {
+        dialog: "calc(100% + 1.5rem)",
+      },
     },
   },
   plugins: [],

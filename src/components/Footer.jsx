@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="px-6 py-8 bg-black text-white grid justify-items-center gap-12 sm:justify-items-start">
       <img src={LogoImage} alt="Logo" />
-      <ul className="gap-4 uppercase text-sm font-bold flex flex-col sm:flex-row sm:gap-8">
+      <ul className="gap-4 uppercase text-sm font-bold flex flex-col items-center sm:flex-row sm:gap-8">
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -25,7 +25,7 @@ const Footer = () => {
         </li>
       </ul>
       <Body color="white">
-        <span className="text-left">
+        <span className="text-center md:text-left">
           Audiophile is an all in one stop to fulfill your audio needs.
           We&apos;re a small team of music lovers and sound specialists who are
           devoted to helping you get the most out of personal audio. Come and
