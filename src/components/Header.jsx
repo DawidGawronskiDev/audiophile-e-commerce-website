@@ -28,15 +28,31 @@ const Header = () => {
   return (
     <div className="fixed top-0 left-0 z-50 w-full bg-white">
       <header className="px-6 py-8 bg-black text-white flex items-center justify-between h-24 sm:gap-12">
-        <button onClick={handleMenu}>
-          <img src={HamburgerIcon} alt="Menu" />
-        </button>
-        <Link to="/" className="sm:flex-1">
-          <img src={LogoImage} alt="Logo" />
-        </Link>
-        <button onClick={openCart}>
-          <img src={CartIcon} alt="Cart" />
-        </button>
+        <div className="w-full bg-black text-white flex items-center justify-between h-24 sm:gap-12 max-w-5xl lg:mx-auto">
+          <button onClick={handleMenu} className="lg:hidden">
+            <img src={HamburgerIcon} alt="Menu" />
+          </button>
+          <Link to="/" className="sm:flex-1 lg:flex-none">
+            <img src={LogoImage} alt="Logo" />
+          </Link>
+          <ul className="flex items-start justify-center gap-8 uppercase font-bold text-sm">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/">Headphones</Link>
+            </li>
+            <li>
+              <Link to="/">Speakers</Link>
+            </li>
+            <li>
+              <Link to="/">Earphones</Link>
+            </li>
+          </ul>
+          <button onClick={openCart}>
+            <img src={CartIcon} alt="Cart" />
+          </button>
+        </div>
       </header>
       {showMenu && (
         <div className="h-screen overflow-y-auto py-24 block md:hidden">

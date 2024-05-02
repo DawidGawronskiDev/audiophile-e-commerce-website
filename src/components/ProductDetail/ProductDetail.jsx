@@ -31,7 +31,7 @@ const ProductDetail = () => {
   return (
     <>
       <div />
-      <div className="m-6 flex gap-8 flex-col md:flex-row md:*:flex-1 md:gap-16">
+      <div className="m-6 flex gap-8 flex-col md:flex-row md:*:flex-1 md:gap-16 max-w-5xl lg:mx-auto">
         <div>
           <DynamicImage
             mobile={`http://localhost:3000${product.image.mobile}`}
@@ -51,8 +51,10 @@ const ProductDetail = () => {
           <AddToCart product={product} />
         </div>
       </div>
-      <ProductFeatures features={product.features} />
-      <ProductIncludes includes={product.includes} />
+      <div className="flex flex-col gap-32 lg:flex-row max-w-5xl lg:mx-auto lg:*:flex-1">
+        <ProductFeatures features={product.features} />
+        <ProductIncludes includes={product.includes} />
+      </div>
       <ProductGallery gallery={product.gallery} />
     </>
   );

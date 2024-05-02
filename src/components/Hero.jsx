@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="h-[729px] flex items-center justify-center bg-black/90 text-white bg-hero-mobile bg-center bg-contain bg-no-repeat relative">
       <div className="w-full h-full bg-black/60 z-10 absolute"></div>
       <div className="text-center flex flex-col items-center justify-center gap-10 z-20">
-        <div className="grid gap-6 w-96">
+        <div className="grid gap-6 max-w-md">
           <Overline>New product</Overline>
 
           <HeadingXL>XX99 Mark II Headphones</HeadingXL>

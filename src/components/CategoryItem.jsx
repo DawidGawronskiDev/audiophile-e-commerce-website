@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const CategoryItem = ({ image, label, link }) => {
   return (
-    <li className="w-full bg-slate-100 relative flex flex-col gap-4 items-center justify-center pb-4">
+    <li className="w-full bg-slate-100 relative flex flex-col gap-4 items-center justify-center pb-6 rounded-lg">
       <img
         src={image}
         alt={`Image of ${label}`}

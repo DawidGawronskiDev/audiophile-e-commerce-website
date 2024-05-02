@@ -8,13 +8,15 @@ import DynamicImage from "../UI/DynamicImage";
 
 const ProductItem = ({ product }) => {
   return (
-    <li className="gap-8 flex flex-col justify-center items-center">
-      <DynamicImage
-        mobile={`http://localhost:3000${product.categoryImage.mobile}`}
-        tablet={`http://localhost:3000${product.categoryImage.tablet}`}
-        desktop={`http://localhost:3000${product.categoryImage.desktop}`}
-      />
-      <div className="gap-6 flex flex-col justify-center items-center text-center sm:max-w-xl">
+    <li className="gap-8 flex flex-col justify-center items-center lg:flex-row lg:*:flex-1 lg:gap-32 even:flex-row-reverse">
+      <div>
+        <DynamicImage
+          mobile={`http://localhost:3000${product.categoryImage.mobile}`}
+          tablet={`http://localhost:3000${product.categoryImage.tablet}`}
+          desktop={`http://localhost:3000${product.categoryImage.desktop}`}
+        />
+      </div>
+      <div className="gap-6 flex flex-col justify-center items-center text-center sm:max-w-xl lg:text-left lg:items-start">
         {product.new && <Overline orange>New Product</Overline>}
         <HeadingL>{product.name}</HeadingL>
         <Body>

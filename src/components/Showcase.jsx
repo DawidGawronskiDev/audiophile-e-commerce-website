@@ -8,19 +8,25 @@ import FirstMobile from "/src/assets/home/desktop/image-speaker-zx9.png";
 import FirstTablet from "/src/assets/home/tablet/image-speaker-zx9.png";
 import FirstDesktop from "/src/assets/home/desktop/image-speaker-zx9.png";
 
+import SecondMobile from "/src/assets/home/mobile/image-speaker-zx7.jpg";
+import SecondTablet from "/src/assets/home/tablet/image-speaker-zx7.jpg";
+import SecondDesktop from "/src/assets/home/desktop/image-speaker-zx7.jpg";
+
 import ThirdMobile from "/src/assets/home/mobile/image-earphones-yx1.jpg";
 import ThirdTablet from "/src/assets/home/tablet/image-earphones-yx1.jpg";
 import ThirdDesktop from "/src/assets/home/desktop/image-earphones-yx1.jpg";
 
 const Showcase = () => {
   return (
-    <div className="mx-6 grid gap-4">
-      <div className="bg-orange-400 bg-circles bg-contain bg-top bg-no-repeat p-6 flex flex-col gap-8 items-center justify-center rounded-lg text-center">
-        <DynamicImage
-          mobile={FirstMobile}
-          tablet={FirstTablet}
-          desktop={FirstDesktop}
-        />
+    <div className="mx-6 grid gap-4 max-w-5xl lg:mx-auto">
+      <div className="bg-orange-400 bg-circles bg-contain bg-top bg-no-repeat p-6 flex flex-col gap-8 items-center justify-center rounded-lg text-center lg:flex-row lg:overflow-hidden">
+        <div className="lg:w-1/3 translate-y-9">
+          <DynamicImage
+            mobile={FirstMobile}
+            tablet={FirstTablet}
+            desktop={FirstDesktop}
+          />
+        </div>
         <div className="grid justify-items-center gap-6 sm:max-w-80">
           <HeadingXL>
             <span className="text-white">ZX9 SPEAKER</span>
@@ -33,9 +39,18 @@ const Showcase = () => {
         </div>
       </div>
 
-      <div className="bg-showcase-speaker-mobile bg-cover bg-center p-6 rounded-lg flex flex-col items-start justify-center gap-4 h-96 sm:bg-cover">
-        <HeadingS>ZX7 SPEAKER</HeadingS>
-        <ButtonBlack>See Product</ButtonBlack>
+      <div className="relative">
+        <div className="*:w-full">
+          <DynamicImage
+            mobile={SecondMobile}
+            tablet={SecondTablet}
+            desktop={SecondDesktop}
+          />
+        </div>
+        <div className="flex flex-col gap-4 absolute top-1/2 -translate-y-1/2 left-6 lg:left-8">
+          <HeadingS>ZX7 SPEAKER</HeadingS>
+          <ButtonBlack>See Product</ButtonBlack>
+        </div>
       </div>
 
       <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:*:flex-1">

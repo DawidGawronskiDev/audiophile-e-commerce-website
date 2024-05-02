@@ -17,7 +17,7 @@ const ProductList = ({ type }) => {
   }
 
   return (
-    <ul className="mx-6 grid gap-32">
+    <ul className="mx-6 grid gap-32  max-w-5xl lg:mx-auto">
       {products &&
         products.map((product) => (
           <ProductItem key={product.id} product={product} />

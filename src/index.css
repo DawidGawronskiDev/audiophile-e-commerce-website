@@ -31,4 +31,8 @@
       grid-row: 1 / 3;
     }
   }
+
+  .max-width {
+    @apply max-w-5xl mx-auto;
+  }
 }

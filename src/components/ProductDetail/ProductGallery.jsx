@@ -2,7 +2,7 @@ import DynamicImage from "../UI/DynamicImage";
 
 const ProductGallery = ({ gallery }) => {
   return (
-    <div className="mx-6">
+    <div className="mx-6 max-w-5xl lg:mx-auto">
       <ul className="product-detail-gallery">
         {Object.values(gallery).map((item, index) => {
           return (

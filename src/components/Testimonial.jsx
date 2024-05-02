@@ -9,7 +9,7 @@ import ImageDesktop from "/src/assets/shared/desktop/image-best-gear.jpg";
 
 const Testimonial = () => {
   return (
-    <div className="mx-6 flex flex-col gap-10 text-center">
+    <div className="mx-6 flex flex-col gap-10 text-center max-w-5xl lg:mx-auto lg:flex-row-reverse lg:items-center lg:text-left">
       <DynamicImage
         mobile={ImageMobile}
         tablet={ImageTablet}
