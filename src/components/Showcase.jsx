@@ -38,7 +38,7 @@ const Showcase = () => {
         <ButtonBlack>See Product</ButtonBlack>
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:*:flex-1">
         <div>
           <DynamicImage
             mobile={ThirdMobile}

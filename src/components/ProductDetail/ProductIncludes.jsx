@@ -3,7 +3,7 @@ import HeadingL from "../UI/HeadingL";
 
 const ProductIncludes = ({ includes }) => {
   return (
-    <div className="mx-6 flex flex-col gap-6">
+    <div className="mx-6 flex flex-col gap-6 md:flex-row md:*:flex-1">
       <HeadingL>
         <span>In the box</span>
       </HeadingL>

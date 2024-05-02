@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const ButtonOrange = ({ children, link, ...props }) => {
   return (
-    <button className="bg-orange-600 px-8 py-4 uppercase text-sm font-bold text-white">
+    <button className="bg-orange-600 px-8 py-4 uppercase text-sm font-bold text-white max-w-max">
       <Link to={link} {...props}>
         {children}
       </Link>

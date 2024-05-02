@@ -15,18 +15,20 @@ const Testimonial = () => {
         tablet={ImageTablet}
         desktop={ImageDesktop}
       />
-      <HeadingL>
-        Bringing you the <span className="text-orange-600">best</span> audio
-        gear
-      </HeadingL>
-      <Body>
-        Located at the heart of New York City, Audiophile is the premier store
-        for high end headphones, earphones, speakers, and audio accessories. We
-        have a large showroom and luxury demonstration rooms available for you
-        to browse and experience a wide range of our products. Stop by our store
-        to meet some of the fantastic people who make Audiophile the best place
-        to buy your portable audio equipment.
-      </Body>
+      <div className="max-w-prose flex flex-col mx-auto gap-10">
+        <HeadingL>
+          Bringing you the <span className="text-orange-600">best</span> audio
+          gear
+        </HeadingL>
+        <Body>
+          Located at the heart of New York City, Audiophile is the premier store
+          for high end headphones, earphones, speakers, and audio accessories.
+          We have a large showroom and luxury demonstration rooms available for
+          you to browse and experience a wide range of our products. Stop by our
+          store to meet some of the fantastic people who make Audiophile the
+          best place to buy your portable audio equipment.
+        </Body>
+      </div>
     </div>
   );
 };
