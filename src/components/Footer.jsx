@@ -12,20 +12,7 @@ const Footer = () => {
     <footer className="bg-black">
       <div className="px-6 py-8 text-white grid justify-items-center gap-12 sm:justify-items-start max-w-5xl lg:mx-auto">
         <img src={LogoImage} alt="Logo" />
-        <ul className="gap-4 uppercase text-sm font-bold flex flex-col items-center sm:flex-row sm:gap-8">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/">Headphones</Link>
-          </li>
-          <li>
-            <Link to="/">Speakers</Link>
-          </li>
-          <li>
-            <Link to="/">Earphones</Link>
-          </li>
-        </ul>
+        <Navigation />
         <Body color="white">
           <span className="text-center md:text-left">
             Audiophile is an all in one stop to fulfill your audio needs.
@@ -38,7 +25,6 @@ const Footer = () => {
           <p className="font-bold text-base opacity-50">
             Copyright 2021. All Rights Reserved
           </p>
-          <Navigation />
         </div>
       </div>
     </footer>
