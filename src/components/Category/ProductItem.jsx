@@ -8,7 +8,7 @@ import DynamicImage from "../UI/DynamicImage";
 
 const ProductItem = ({ product }) => {
   return (
-    <li className="gap-8 flex flex-col justify-center items-center lg:flex-row lg:*:flex-1 lg:gap-32 even:flex-row-reverse">
+    <li className="gap-8 flex flex-col justify-center items-center lg:flex-row lg:*:flex-1 lg:gap-32 lg:even:flex-row-reverse">
       <div>
         <DynamicImage
           mobile={`http://localhost:3000${product.categoryImage.mobile}`}
