@@ -10,6 +10,7 @@ import ProductFeatures from "./ProductFeatures";
 import ProductIncludes from "./ProductIncludes";
 import ProductGallery from "./ProductGallery";
 import DynamicImage from "../UI/DynamicImage";
+import LoadingPlaceholder from "../UI/LoadingPlaceholder";
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -21,7 +22,12 @@ const ProductDetail = () => {
   } = useFetch(`http://localhost:3000/api/v1/product/${slug}`);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <>
+        <div />
+        <LoadingPlaceholder />
+      </>
+    );
   }
 
   if (error) {

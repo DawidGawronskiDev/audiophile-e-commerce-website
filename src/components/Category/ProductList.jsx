@@ -1,5 +1,6 @@
 import ProductItem from "./ProductItem";
 import useFetch from "../../hooks/useFetch";
+import ProductPlaceholder from "../UI/LoadingPlaceholder";
 
 const ProductList = ({ type }) => {
   const {
@@ -9,7 +10,7 @@ const ProductList = ({ type }) => {
   } = useFetch(`http://localhost:3000/api/v1/category/${type}`);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <ProductPlaceholder />;
   }
 
   if (error) {

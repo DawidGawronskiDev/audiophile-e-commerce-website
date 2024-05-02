@@ -3,13 +3,12 @@ import Overline from "../UI/Overline";
 import HeadingL from "../UI/HeadingL";
 import Body from "../UI/Body";
 import ButtonOrange from "../UI/ButtonOrange";
-import ProductImage from "../ProductImage";
 import DynamicImage from "../UI/DynamicImage";
 
 const ProductItem = ({ product }) => {
   return (
     <li className="gap-8 flex flex-col justify-center items-center lg:flex-row lg:*:flex-1 lg:gap-32 lg:even:flex-row-reverse">
-      <div>
+      <div className="w-full">
         <DynamicImage
           mobile={`http://localhost:3000${product.categoryImage.mobile}`}
           tablet={`http://localhost:3000${product.categoryImage.tablet}`}

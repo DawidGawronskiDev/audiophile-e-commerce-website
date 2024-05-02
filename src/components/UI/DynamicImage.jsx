@@ -33,6 +33,12 @@ const DynamicImage = ({ mobile, tablet, desktop }) => {
     changeImage(width, setCurrentImage, [mobile, tablet, desktop]);
   }, []);
 
+  if (!currentImage) {
+    return (
+      <div className="w-full h-96 bg-gray-300 animate-pulse rounded-lg"></div>
+    );
+  }
+
   return <img src={currentImage} alt="" className="rounded-lg" />;
 };
 
