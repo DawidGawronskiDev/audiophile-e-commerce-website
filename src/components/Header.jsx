@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../store/cartSlice";
+import Navigation from "./UI/Navigation";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -35,20 +36,9 @@ const Header = () => {
           <Link to="/" className="sm:flex-1 lg:flex-none">
             <img src={LogoImage} alt="Logo" />
           </Link>
-          <ul className="flex items-start justify-center gap-8 uppercase font-bold text-sm">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/">Headphones</Link>
-            </li>
-            <li>
-              <Link to="/">Speakers</Link>
-            </li>
-            <li>
-              <Link to="/">Earphones</Link>
-            </li>
-          </ul>
+          <div className="hidden lg:block">
+            <Navigation />
+          </div>
           <button onClick={openCart}>
             <img src={CartIcon} alt="Cart" />
           </button>

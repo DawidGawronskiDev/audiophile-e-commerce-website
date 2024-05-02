@@ -5,6 +5,7 @@ import FacebookImage from "/src/assets/shared/desktop/icon-facebook.svg";
 import TwitterImage from "/src/assets/shared/desktop/icon-twitter.svg";
 import InstagramImage from "/src/assets/shared/desktop/icon-instagram.svg";
 import Body from "./UI/Body";
+import Navigation from "./UI/Navigation";
 
 const Footer = () => {
   return (
@@ -37,23 +38,7 @@ const Footer = () => {
           <p className="font-bold text-base opacity-50">
             Copyright 2021. All Rights Reserved
           </p>
-          <ul className="flex items-center justify-center gap-4">
-            <li>
-              <Link to="/">
-                <img src={FacebookImage} alt="Facebook" />
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <img src={TwitterImage} alt="Twitter" />
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <img src={InstagramImage} alt="Instagram" />
-              </Link>
-            </li>
-          </ul>
+          <Navigation />
         </div>
       </div>
     </footer>
